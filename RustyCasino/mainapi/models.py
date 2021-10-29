@@ -10,23 +10,20 @@ class Hero(models.Model):
 
 
 class Users(models.Model):
-    id = models.ForeignKey
+    id = models.IntegerField(primary_key=True)
     username = models.CharField(max_length=60)
-    password = models.CharField(max_length=60)
     steamKey = models.CharField(max_length=60)
     referral = models.CharField(max_length=60)
-    level = models.FloatField
-    codeRedeemed = models.IntegerField
-    lang = models.CharField(max_length=20)
-    regDate = models.DateTimeField
-    lastLogDate = models.DateTimeField
-    totalUSDWin = models.FloatField
-    totalUSDLoses = models.FloatField
-    totalUSDProfit = models.FloatField
+    level = models.FloatField(default=0)
+    codeRedeemed = models.IntegerField(default=0)
+    lang = models.CharField(max_length=20,default="eng")
+    regDate = models.DateTimeField()
+    lastLogDate = models.DateTimeField()
+    totalUSDWin = models.FloatField(default=0)
+    totalUSDLoses = models.FloatField(default=0)
+    totalUSDProfit = models.FloatField(default=0)
 
-    wins = models.IntegerField
-
-    inventory = models.JSONField
+    wins = models.IntegerField(default=0)
 
     def __str__(self):
         return self.username
@@ -48,12 +45,6 @@ class BotItems(models.Model):
     id = models.ForeignKey
     itemName = models.CharField(max_length=60)
     value = models.FloatField
-
-    # TEST
-
-    #rewrwerwer
-
-
 
     def __str__(self):
         return self.itemName
