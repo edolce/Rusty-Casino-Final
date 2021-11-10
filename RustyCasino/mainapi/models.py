@@ -16,7 +16,7 @@ class Users(models.Model):
     referral = models.CharField(max_length=60)
     level = models.FloatField(default=0)
     codeRedeemed = models.IntegerField(default=0)
-    lang = models.CharField(max_length=20,default="eng")
+    lang = models.CharField(max_length=20, default="eng")
     regDate = models.DateTimeField()
     lastLogDate = models.DateTimeField()
     totalUSDWin = models.FloatField(default=0)
