@@ -99,7 +99,7 @@ class WithdrawView(APIView):
 
         # Mandare Segnale al Bot
         # TODO MODIFY ENV
-        url = 'http://localhost:8081/'
+        url = 'http://104.194.242.202:8081/'
 
         myobj = {
             "type": "withdraw",
