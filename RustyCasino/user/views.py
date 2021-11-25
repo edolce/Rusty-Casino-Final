@@ -90,6 +90,18 @@ class UserData(APIView):
         return Response(serializer.data)
 
 
+class CheckSession(APIView):
+    def get(self, request):
+        token = request.COOKIES.get('jwt')
+        if not token:
+            raise AuthenticationFailed('Unauthenticated!')
+        try:
+            jwt.decode(token, 'secret', algorithms=['HS256'])
+        except jwt.ExpiredSignatureError:
+            raise AuthenticationFailed('Unauthenticated!')
+
+        return Response("success!")
+
 class SteamData(APIView):
     def get(self, request):
         token = request.COOKIES.get('jwt')
