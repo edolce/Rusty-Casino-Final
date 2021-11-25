@@ -18,7 +18,7 @@ function Header(props) {
         if(props.loggedIn) {
             history.push("/profile")
         }else {
-            window.location.href ="http://127.0.0.1:8000/user/login/"
+            window.location.href ="http://104.194.242.202:8000/user/login/"
         }
     }
 

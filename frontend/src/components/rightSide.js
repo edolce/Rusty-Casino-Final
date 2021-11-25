@@ -1,8 +1,4 @@
-import { NavLink, Switch, Route } from 'react-router-dom';
-
 import Emoticons from "../image/Label_template_White3.png"
-import Currency from "../image/Site currecny logo concept 1.png"
-import ExampleItemImage from "../image/random skin.png"
 import Refresh from "../image/refresh.png"
 import {Component} from "react";
 import InventoryItem from "./inventoryItem";
@@ -27,11 +23,6 @@ class RightSide extends Component {
             invContent.style.display = "flex";
             chatContent.style.display = "none";
         }
-    }
-
-
-
-    handleWithdrawClick = () => {
     }
 
     selectionHandler = (event,item) => {

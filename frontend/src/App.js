@@ -37,7 +37,7 @@ class App extends Component {
 
     }
     isLoggedIn() {
-        fetch('http://127.0.0.1:8000/user/checksession/', {
+        fetch('https://104.194.242.202:8000/user/checksession/', {
             method: "GET",
             headers: {
                 'Accept': 'application/json',
@@ -60,7 +60,7 @@ class App extends Component {
     }
 
     fetchUserInventory() {
-        fetch('http://127.0.0.1:8000/inventory/items', {
+        fetch('https://104.194.242.202:8000/inventory/items', {
             method: "GET",
             headers: {
                 'Accept': 'application/json',
@@ -91,7 +91,7 @@ class App extends Component {
     fetchUserData() {
 
         let user = {...this.state.user}
-        fetch('http://127.0.0.1:8000/user/me/', {
+        fetch('https://104.194.242.202:8000/user/me/', {
             method: "GET",
             headers: {
                 'Accept': 'application/json',
@@ -104,7 +104,7 @@ class App extends Component {
             })
             .then(result => {
                 user["level"] = result.level
-                fetch('http://127.0.0.1:8000/user/meSteam/', {
+                fetch('https://104.194.242.202:8000/user/meSteam/', {
                     method: "GET",
                     headers: {
                         'Accept': 'application/json',
@@ -145,7 +145,7 @@ class App extends Component {
                 items: inventory.filter(item=>item.selected===true)
             })
         };
-        fetch('http://127.0.0.1:8000/inventory/deposit', requestOptions)
+        fetch('https://104.194.242.202:8000/inventory/deposit', requestOptions)
             .then(response => response.json())
             .then(data => this.setState({ postId: data.id }));
     }
@@ -160,7 +160,7 @@ class App extends Component {
                 items: this.state.inventoryItemsSelected
             })
         };
-        fetch('http://127.0.0.1:8000/inventory/withdraw', requestOptions)
+        fetch('https://104.194.242.202:8000/inventory/withdraw', requestOptions)
             .then(response => response.json())
             .then(data => this.setState({ postId: data.id }));
     }

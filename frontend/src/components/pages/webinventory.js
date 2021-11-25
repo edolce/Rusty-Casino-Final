@@ -12,7 +12,7 @@ class WebInventory extends Component {
     }
 
     fetchData() {
-        fetch('http://127.0.0.1:8000/inventory/items',{
+        fetch('https://104.194.242.202:8000/inventory/items',{
             method: "GET",
             headers: {
                 'Accept': 'application/json',

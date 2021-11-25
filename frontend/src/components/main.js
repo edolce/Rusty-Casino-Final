@@ -2,7 +2,6 @@ import {Route, Switch} from "react-router-dom";
 
 import Home from "./pages/home"
 import Profile from "./pages/profile"
-import Navigation from "./navigation"
 import WebInventory from "./pages/webinventory"
 
 const Main = () => (

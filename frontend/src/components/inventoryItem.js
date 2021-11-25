@@ -1,6 +1,5 @@
 import {Component} from "react";
 import Currency from "../image/Site currecny logo concept 1.png";
-import ExampleItemImage from "../image/random skin.png";
 
 class InventoryItem extends Component {
 

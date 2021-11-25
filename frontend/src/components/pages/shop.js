@@ -18,7 +18,7 @@ class Shop extends Component {
     }
 
     fetchData() {
-        fetch('http://127.0.0.1:8000/user/me/',{
+        fetch('https://104.194.242.202:8000/user/me/',{
             method: "GET",
             headers: {
                 'Accept': 'application/json',
